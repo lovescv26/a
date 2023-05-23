@@ -1,0 +1,283 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  box-sizing: border-box;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+  font-family: "Lato", "Noto Sans TC", sans-serif;
+}
+
+a {j
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.header,
+.footer {
+  width: 100%;
+  height: 60px;
+  background-color: #3695c4;
+}
+
+.content {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 0;
+  border-bottom: 3px solid #d3d3d3;
+}
+
+.intro .pic {
+  width: 20%;
+}
+
+.intro .title {
+  width: 60%;
+}
+
+.title .text {
+  color: #3695c4;
+  display: flex;
+  align-items: center;
+}
+
+.text h1 {
+  width: 30%;
+}
+
+.text h2 {
+  width: 70%;
+  text-align: center;
+}
+
+.title .list {
+  display: flex;
+  flex-wrap: wrap;
+  color: #3695c4;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.list li {
+  width: 50%;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+i {
+  background-color: #3695c4;
+  color: white;
+  padding: 5px 5px 5px 8px;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    display: block;
+    padding: 30px 0 20px;
+  }
+  .intro .pic {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .intro .title {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .title .text {
+    display: block;
+    padding: 10px 0;
+  }
+  .text h1,
+  .text h2 {
+    width: 100%;
+    text-align: center;
+  }
+  .text h2 {
+    padding-top: 20px;
+  }
+  .title .list {
+    display: block;
+  }
+  .list li {
+    width: 70%;
+    margin: 0 auto;
+  }
+  i {
+    font-size: 16px;
+  }
+}
+
+.item-group {
+  padding: 50px 0;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+}
+
+.item::after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background-color: #3695c4;
+  position: absolute;
+  top: 50px;
+  left: 20.8%;
+  z-index: -2;
+}
+
+.item h2 {
+  padding: 5px 10px;
+  text-align: center;
+  color: #3695c4;
+  border: 5px solid #3695c4;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+.item.active h2,
+.item.active .icon .fas::after {
+  color: #0a4b83;
+  background-color: #d1e3e8;
+  border: 5px solid #0a4b83;
+}
+
+.item .icon {
+  width: 10%;
+  text-align: center;
+}
+
+.icon .fas {
+  font-size: 36px;
+  border-radius: 50%;
+  padding: 10px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.item.active .icon .fas {
+  color: #d1e3e8;
+  background-color: #0a4b83;
+}
+
+.icon .fas::after {
+  content: "";
+  width: 120%;
+  height: 120%;
+  border: 5px solid #3695c4;
+  background-color: white;
+  position: absolute;
+  border-radius: 50%;
+  top: -10px;
+  left: -11px;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.item .text {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-bottom: 50px;
+  border-bottom: 3px solid #d3d3d3;
+}
+
+.item .text-group {
+  width: 70%;
+}
+
+.text-group .text {
+  width: 100%;
+}
+
+.text-group .cancel {
+  border-bottom: 0;
+}
+
+.item:not(:first-child) {
+  padding-top: 50px;
+}
+
+.text h3 {
+  width: 30%;
+  color: #3695c4;
+  transition: 0.5s;
+}
+
+.item.active .text h3 {
+  color: #0a4b83;
+  text-shadow: 3px 3px 3px #bbb;
+}
+
+.text .describe {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.describe li {
+  margin-left: 20px;
+  list-style: decimal;
+}
+
+@media (max-width: 768px) {
+  .item-group {
+    padding: 25px 0;
+  }
+  .item {
+    display: block;
+  }
+  .item::after {
+    display: none;
+  }
+  .item h2 {
+    width: 50%;
+    margin: 0 auto;
+  }
+  .item .icon {
+    display: none;
+  }
+  .item .text {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 25px;
+  }
+  .text h3 {
+    width: 100%;
+    padding: 10px 0;
+  }
+  .item .text-group {
+    width: 90%;
+  }
+  .item:not(:first-child) {
+    padding-top: 25px;
+  }
+}
+
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

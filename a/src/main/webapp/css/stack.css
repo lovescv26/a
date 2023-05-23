@@ -1,0 +1,27 @@
+.s-prose pre:not(.s-code-block) {
+    scrollbar-color: var(--scrollbar) transparent;
+
+/*
+    background-color: var(--highlight-bg);
+*/
+    background-color: #a9a9a9;
+    border-radius: var(--br-md);
+    color: var(--highlight-color);
+    font-size: var(--fs-body1);
+    line-height: var(--lh-md);
+    max-height: 600px;
+    overflow: auto;
+    padding: var(--su12);
+    width: auto
+}
+
+.s-prose pre {
+    margin-top: 0;
+    margin-bottom: calc(1.1em + .4em);
+    overflow-wrap: normal;
+}
+
+.pre {
+
+    background-color: #a9a9a9;
+}
